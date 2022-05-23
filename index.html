@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Doctors chember</title>
+
+    <!-- bootstrap 5.1.3 min cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- bootstrap icon  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+
+    <!--  custom styles -->
+    <style>
+        .prescription_icon {
+            cursor: pointer;
+            margin: 0 5px;
+        }
+    </style>
+
+</head>
+
+<body id="printSection  ">
+
+    <!-- table -->
+    <div class="listOf_patients m-3 table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Patients ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Number</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">69</th>
+                    <td>Abdul Jabbar</td>
+                    <td>+88011111</td>
+                    <td>23</td>
+                    <td>Male</td>
+                    <td>Dhaka</td>
+                    <td class="prescription_icon">
+                        <i data-bs-toggle="modal" data-bs-target="#editModal"
+                            class=" bi prescription_icon bi-pencil-fill text-secondary"></i>
+                        <i data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                            class="bi prescription_icon bi-printer-fill text-primary"></i>
+                        <i class="bi prescription_icon  bi-trash-fill text-danger"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <!-- Modal for report-->
+    <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-fullscreen-lg-down" role="document">
+            <div class="modal-content rounded-5 shadow">
+                <div class=" p-5 pb-1 border-bottom-0 d-flex justify-content-center align-items-center">
+                    <img width="50px" src="logo.png" alt="">
+                    <span class="ms-5">
+                        <p class="m-0 fs-4 inline">IBN SINA Medical College Hospital</p>
+
+
+                    </span>
+                </div>
+                <div class="modal-body">
+                    <div class="row" id="printThis">
+                        <div class="col-6">
+                            <h3>Dr. Tousif</h3>
+                            <p style="font-size: 14px" class=" my-0">MBBS</p>
+                            <p style="font-size: 14px" class=" my-0 mb-3">Shop 1 stockaknd</p>
+                        </div>
+                        <div class="col-6 text-end">
+                            <h3>Prescription</h3>
+                            <h5 class="text-muted fw-light">#028 / 01</h5>
+
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="card me-auto">
+                                <div class="card-header">
+                                    Patient : Alex
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <small style="font-size:12px"><span class="fw-bold">Phone :
+                                            </span>222224</small><br>
+                                        <small style="font-size:12px"><span class="fw-bold">age : </span>25</small><br>
+                                        <small style="font-size:12px"><span class="fw-bold">Gender :
+                                            </span>Male</small><br>
+                                        <small style="font-size:12px"><span class="fw-bold">Address : </span>Kolikata
+                                            Harbal</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-12 col-sm-6 text-end">
+                            <div class="card me-auto">
+                                <div class="card-header">
+                                    <small>Info:</small>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <small style="font-size:12px"><span class="fw-bold">Referred By : </span>Dr.
+                                            ABC</small><br>
+                                        <small style="font-size:12px"><span class="fw-bold">Referred By :
+                                            </span>Dr. ABC</small><br>
+                                        <small style="font-size:12px">Cardiologist</small><br>
+                                        <small style="font-size:12px"><span class="fw-bold">Prescribed Date :
+                                            </span>2022-02-21
+                                            16:20:54</span></small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-12 col-sm-4 border-end ">
+                            <div class="table-responsive mt-5">
+                                <h5 class="text-center text-muted fw-light">Diagnosis and test</h5>
+                                <table class="table table-borderless mt-4">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-muted" scope="col">SI #</th>
+                                            <th class="text-muted" scope="col">Diagnosis Description</th>
+                                            <th class="text-muted" scope="col">Time</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-muted">1</td>
+                                            <td>Covid Test, Lab Aid </td>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-muted" scope="row">2</td>
+                                            <td>CBC </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-muted" scope="row">2</td>
+                                            <td>X-ray</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 mb-5">
+                            <h1 class="text-muted ms-4 fw-light mt-2 user-select-none position-absolute">&#8478;</h1>
+                            <div class="table-responsive mt-5">
+                                <h5 class="text-center text-muted fw-light">Diagnosis and test</h5>
+                                <table class="table table-borderless mt-4">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-muted" scope="col">SI #</th>
+                                            <th class="text-muted" scope="col">Drugs Description</th>
+                                            <th class="text-muted" scope="col">Generic</th>
+                                            <th class="text-muted" scope="col">Schedule</th>
+                                            <th class="text-muted" scope="col">Days</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-muted">1</td>
+                                            <td><sup class="text-muted">Tab:&nbsp;&nbsp; </sup> <span
+                                                    class="fw-bold">Napa</span>
+                                            </td>
+                                            <td></td>
+                                            <td>1+1+1</td>
+                                            <td>Continue</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-muted" scope="row">2</td>
+                                            <td><sup class="text-muted">Tab:&nbsp;&nbsp;</sup> <span
+                                                    class="fw-bold">Reelife</span>
+                                            </td>
+                                            <td></td>
+                                            <td>1+0+1 <span class="text-muted">(After)</span></td>
+                                            <td>Continue</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-muted" scope="row">2</td>
+                                            <td><sup class="text-muted">Cap:&nbsp;&nbsp;</sup> <span
+                                                    class="fw-bold">Dicatrol</span>
+                                            </td>
+                                            <td></td>
+                                            <td>0+1+1</td>
+                                            <td>2 month</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="text-primary  bi bi-printer-fill fs-2" style="cursor: pointer;" id="btnPrint"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal  for create-->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-fullscreen-lg-down" role="document">
+            <div class="modal-content rounded-5 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-5 pt-0">
+
+                    <div class="row g-5">
+                        <div class="col-md-5 col-lg-4 order-md-last">
+                            <div>
+                                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="text-secondary">Drug&Medicines</span>
+                                    <span class="badge bg-primary rounded-pill">3</span>
+                                </h4>
+                                <ul class="list-group mb-3">
+                                    <li class="list-group-item ps-2 d-flex justify-content-between lh-sm">
+                                        <div>
+                                            <h6 class="my-0"> <sup class="text-muted">Tab:</sup> Napa</h6>
+                                            <small class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                1+1+1</small>
+                                        </div>
+                                        <span class="text-muted">Continue</span>
+                                    </li>
+                                    <li class="list-group-item ps-2 d-flex justify-content-between lh-sm">
+                                        <div>
+                                            <h6 class="my-0"> <sup class="text-muted">Tab:</sup> Reelife</h6>
+                                            <small class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                1+0+1</small>
+                                        </div>
+                                        <span class="text-muted">Continue</span>
+                                    </li>
+                                    <li class="list-group-item ps-2 d-flex justify-content-between lh-sm">
+                                        <div>
+                                            <h6 class="my-0"> <sup class="text-muted">Cap:</sup> Dicatrol </h6>
+                                            <small class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                0+1+1</small>
+                                        </div>
+                                        <span class="text-muted">2 month</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="text-secondary">Diganostic And test</span>
+                                    <span class="badge bg-primary rounded-pill">3</span>
+                                </h4>
+                                <ul class="list-group mb-3">
+                                    <li class="list-group-item ps-2 d-flex justify-content-between lh-sm">
+                                        <div>
+                                            <h6 class="my-0 text-success">Hb</h6>
+                                            <small class="text-muted">15/03/2021: 9.0</small>
+                                        </div>
+                                        <small class="text-muted">Next meet</small>
+                                    </li>
+                                    <li class="list-group-item ps-2 d-flex justify-content-between lh-sm">
+                                        <div>
+                                            <h6 class="my-0 text-success">CBC</h6>
+                                            <small class="text-muted">15/03/2021: 120/Normal</small>
+                                        </div>
+                                        <small class="text-muted">Next meet:</small>
+                                    </li>
+                                    <li class="list-group-item ps-2 d-flex justify-content-between lh-sm">
+                                        <div>
+                                            <h6 class="my-0 text-success">X-ray</h6>
+                                            <small class="text-muted"> no report</small>
+                                        </div>
+                                        <small class="text-muted">After 15 days</small>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7 col-lg-8">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="mb-3">Prescription Info :</h4>
+                                <div>
+                                    <p class="text-muted m-0">Prescrib Date: 15/5/20</p>
+                                    <small class="text-muted mb-1">Visit No: 10</small>
+
+                                </div>
+                            </div>
+                            <form class="needs-validation" novalidate>
+                                <div class="row g-3">
+                                    <!-- 1st row -->
+                                    <div class="col-sm-6 input-group-sm">
+
+                                        <label for="fullName" class="form-label">Full name</label>
+                                        <input type="text" class="form-control" id="fullName" value="Abdul Jabbar"
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Valid full name is required.
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-sm-3 input-group-sm">
+                                        <label for="gender" class="form-label">Gender</label>
+                                        <select class="form-select" id="gender" required>
+                                            <option value="">Male</option>
+                                            <option>Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3 input-group-sm">
+                                        <label for="age" class="form-label">Age</label>
+                                        <input type="text" class="form-control" id="age" value="25" value="" required>
+                                        <div class="invalid-feedback">
+                                            Valid Age is required.
+                                        </div>
+                                    </div>
+                                    <!-- 2nd row -->
+                                    <div class="col-sm-4 input-group-sm">
+                                        <label for="mobile" class="form-label">Mobile</label>
+                                        <input type="text" class="form-control" id="mobile" value="01733941913"
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Valid Number is required.
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 input-group-sm">
+                                        <label for="patientType" class="form-label">Patient Type</label>
+                                        <select class="form-select" id="patientType" required>
+                                            <option value="">Old</option>
+                                            <option>New</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-5 input-group-sm">
+                                        <label for="referred_by_Doc" class="form-label">Referred By Doctor</label>
+                                        <input type="text" class="form-control" id="referred_by_Doc"
+                                            value="Doc. Abdullah" required>
+                                        <div class="invalid-feedback">
+                                            Valid Referred By Doctor name is required.
+                                        </div>
+                                    </div>
+
+                                    <!-- 3rd row -->
+                                    <div class="col-12 input-group-sm">
+                                        <label for="address" class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="address"
+                                            value="Tongi Collage gate Dhaka" required>
+                                        <div class="invalid-feedback">
+                                            Please enter your address.
+                                        </div>
+                                    </div>
+                                    <!-- next unit -->
+                                    <hr class="my-4">
+
+                                    <div class=" col-12 form-floating">
+                                        <textarea class="form-control"
+                                            placeholder="Patients Problems / Symptoms description :"
+                                            id="floatingTextarea"></textarea>
+                                        <label for="floatingTextarea">Patients Problems / Symptoms
+                                            description:</label>
+                                    </div>
+                                    <!-- next unit -->
+
+                                    <hr class="my-4">
+                                    <div class="col-12 row">
+                                        <h2 class="text-center user-select-none text-muted">Under construction</h2>
+                                    </div>
+                                    <button class="w-100 btn btn-primary btn-lg " type="submit">Continue</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- custom js -->
+    <script>
+        document.getElementById("btnPrint").onclick = function () {
+            printElement(document.getElementById("printThis"));
+        };
+
+        var $printSection = document.getElementById("printSection");
+
+        function printElement(elem) {
+            var domClone = elem.cloneNode(true);
+
+
+            if (!$printSection) {
+                var $printSection = document.createElement("div");
+                $printSection.id = "printSection";
+                document.body.appendChild($printSection);
+            }
+
+            $printSection.innerHTML = "";
+            $printSection.style.display = "none";
+            $printSection.appendChild(domClone);
+            window.print();
+        }
+    </script>
+    <!-- Bootstrap 5.1 js min bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
